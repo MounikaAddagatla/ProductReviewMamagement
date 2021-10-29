@@ -22,9 +22,9 @@ namespace ProductReviewManagement
                 new ProductReviewModel(){ProductID=10,UserID=8,Rating=8,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=11,UserID=10,Rating=5,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=12,UserID=12,Rating=6,Review="nice",IsLike=true},
-                new ProductReviewModel(){ProductID=13,UserID=12,Rating=7,Review="nice",IsLike=true},
-                new ProductReviewModel(){ProductID=14,UserID=14,Rating=8,Review="nice",IsLike=true},
-                new ProductReviewModel(){ProductID=15,UserID=14,Rating=8,Review="nice",IsLike=true},
+                new ProductReviewModel(){ProductID=13,UserID=12,Rating=7,Review="nice",IsLike=false},
+                new ProductReviewModel(){ProductID=14,UserID=14,Rating=8,Review="nice",IsLike=false},
+                new ProductReviewModel(){ProductID=15,UserID=14,Rating=8,Review="nice",IsLike=false},
                 new ProductReviewModel(){ProductID=16,UserID=18,Rating=8,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=17,UserID=18,Rating=8,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=18,UserID=19,Rating=9,Review="nice",IsLike=true},
@@ -37,25 +37,25 @@ namespace ProductReviewManagement
                 new ProductReviewModel(){ProductID=25,UserID=20,Rating=6,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=17,UserID=18,Rating=11,Review="nice",IsLike=true}
             };
-            Console.WriteLine(" Adding List of Review records");
-            foreach (var review in productReviewList)
-            {
-                Console.WriteLine("ProductID : " + review.ProductID + " UserID : " + review.UserID + " Rating : " + review.Rating
-                    + " Review : " + review.Review + " IsLike : " + review.IsLike);
-            }
+            //Console.WriteLine(" Adding List of Review records");
+            //foreach (var review in productReviewList)
+            //{
+            //    Console.WriteLine("ProductID : " + review.ProductID + " UserID : " + review.UserID + " Rating : " + review.Rating
+            //        + " Review : " + review.Review + " IsLike : " + review.IsLike);
+            //}
             ProductManagement pm = new ProductManagement();
             //Console.WriteLine("List of top three:");
             //pm.TopRecords(productReviewList);
             //Console.WriteLine("View rating by particular Ids:");
             //pm.SelectIdRecord(productReviewList);
-            //Console.WriteLine(" count of review by  Id:");
+            //Console.WriteLine(" count of review by  Id:"); 
             // pm.CountReviewById(productReviewList);
             //Console.WriteLine(" Get Product Id And Review :");
             //pm.GetProductIdAndReview(productReviewList);
             // Console.WriteLine(" Get Product Id And Review :");
             //  pm.SkipFiveRecord(productReviewList);
-            //Console.WriteLine(" Get all records of Id And Review");
-            //pm.ViewBYIdAndReview(productReviewList);
+            Console.WriteLine(" Get all records of Id And Review");
+            pm.ViewBYIdAndReview(productReviewList);
             Console.ReadLine();
         }
     }
