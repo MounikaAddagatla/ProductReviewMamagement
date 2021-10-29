@@ -51,8 +51,10 @@ namespace ProductReviewManagement
             // pm.CountReviewById(productReviewList);
             //Console.WriteLine(" Get Product Id And Review :");
             //pm.GetProductIdAndReview(productReviewList);
-            Console.WriteLine(" Get Product Id And Review :");
-            pm.SkipFiveRecord(productReviewList);
+            // Console.WriteLine(" Get Product Id And Review :");
+            //  pm.SkipFiveRecord(productReviewList);
+            Console.WriteLine(" Get all records of Id And Review");
+            pm.ViewBYIdAndReview(productReviewList);
             Console.ReadLine();
         }
     }
