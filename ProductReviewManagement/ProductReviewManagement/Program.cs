@@ -49,8 +49,10 @@ namespace ProductReviewManagement
             //pm.SelectIdRecord(productReviewList);
             //Console.WriteLine(" count of review by  Id:");
             // pm.CountReviewById(productReviewList);
+            //Console.WriteLine(" Get Product Id And Review :");
+            //pm.GetProductIdAndReview(productReviewList);
             Console.WriteLine(" Get Product Id And Review :");
-            pm.GetProductIdAndReview(productReviewList);
+            pm.SkipFiveRecord(productReviewList);
             Console.ReadLine();
         }
     }
