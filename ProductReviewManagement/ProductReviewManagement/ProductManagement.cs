@@ -9,7 +9,7 @@ namespace ProductReviewManagement
     class ProductManagement
     {
         public readonly DataTable dataTable = new DataTable();
-
+        // UC2
         public void TopRecords(List<ProductReviewModel> listProductReview)
         {
             var recordData = (from productReviews in listProductReview
@@ -21,6 +21,10 @@ namespace ProductReviewManagement
                     + " Review : " + list.Review + " IsLike : " + list.IsLike);
             }
         }
+        /// <summary>
+        /// UC3
+        /// </summary>
+        /// <param name="listProductReview"></param>
         public void SelectIdRecord(List<ProductReviewModel> listProductReview)
         {
             var recordData = from ProductReview in listProductReview
@@ -30,6 +34,17 @@ namespace ProductReviewManagement
             {
                 Console.WriteLine("ProductID : " + list.ProductID + " UserID : " + list.UserID + " Rating : " + list.Rating
                     + " Review : " + list.Review + " IsLike : " + list.IsLike);
+            }
+        }
+        /// Uc4
+        /// 
+        public void CountReviewById(List<ProductReviewModel> listProductReview)
+        {
+            var recordCount = listProductReview.GroupBy(x => x.ProductID)
+                .Select(x => new { ProductID = x.Key, Count = x.Count() });
+            foreach (var list in recordCount)
+            {
+                Console.WriteLine("Product id : " + list.ProductID + " Count " + list.Count);
             }
         }
     }
