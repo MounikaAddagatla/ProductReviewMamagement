@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ProductReviewManagement
 {
@@ -57,6 +58,11 @@ namespace ProductReviewManagement
             Console.WriteLine(" Get all records of Id And Review");
             pm.ViewBYIdAndReview(productReviewList);
             Console.ReadLine();
+            ///uc8 data table 
+            DataTable table = new DataTable();
+            
+           
+
         }
     }
 }
