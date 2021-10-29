@@ -43,12 +43,14 @@ namespace ProductReviewManagement
             //        + " Review : " + review.Review + " IsLike : " + review.IsLike);
             //}
             ProductManagement pm = new ProductManagement();
-            Console.WriteLine("List of top three:");
-            pm.TopRecords(productReviewList);
-            Console.WriteLine("View rating by particular Ids:");
-            pm.SelectIdRecord(productReviewList);
-            Console.WriteLine(" count of review by  Id:");
-            pm.CountReviewById(productReviewList);
+            //Console.WriteLine("List of top three:");
+            //pm.TopRecords(productReviewList);
+            //Console.WriteLine("View rating by particular Ids:");
+            //pm.SelectIdRecord(productReviewList);
+            //Console.WriteLine(" count of review by  Id:");
+            // pm.CountReviewById(productReviewList);
+            Console.WriteLine(" Get Product Id And Review :");
+            pm.GetProductIdAndReview(productReviewList);
             Console.ReadLine();
         }
     }
