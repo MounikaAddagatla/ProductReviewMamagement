@@ -37,11 +37,12 @@ namespace ProductReviewManagement
                 new ProductReviewModel(){ProductID=25,UserID=20,Rating=6,Review="nice",IsLike=true},
                 new ProductReviewModel(){ProductID=17,UserID=18,Rating=11,Review="nice",IsLike=true}
             };
-            //foreach (var review in productReviewList)
-            //{
-            //    Console.WriteLine("ProductID : " + review.ProductID + " UserID : " + review.UserID + " Rating : " + review.Rating
-            //        + " Review : " + review.Review + " IsLike : " + review.IsLike);
-            //}
+            Console.WriteLine(" Adding List of Review records");
+            foreach (var review in productReviewList)
+            {
+                Console.WriteLine("ProductID : " + review.ProductID + " UserID : " + review.UserID + " Rating : " + review.Rating
+                    + " Review : " + review.Review + " IsLike : " + review.IsLike);
+            }
             ProductManagement pm = new ProductManagement();
             //Console.WriteLine("List of top three:");
             //pm.TopRecords(productReviewList);
@@ -53,8 +54,8 @@ namespace ProductReviewManagement
             //pm.GetProductIdAndReview(productReviewList);
             // Console.WriteLine(" Get Product Id And Review :");
             //  pm.SkipFiveRecord(productReviewList);
-            Console.WriteLine(" Get all records of Id And Review");
-            pm.ViewBYIdAndReview(productReviewList);
+            //Console.WriteLine(" Get all records of Id And Review");
+            //pm.ViewBYIdAndReview(productReviewList);
             Console.ReadLine();
         }
     }
