@@ -55,14 +55,12 @@ namespace ProductReviewManagement
             //pm.GetProductIdAndReview(productReviewList);
             // Console.WriteLine(" Get Product Id And Review :");
             //  pm.SkipFiveRecord(productReviewList);
-            Console.WriteLine(" Get all records of Id And Review");
-            pm.ViewBYIdAndReview(productReviewList);
+            //Console.WriteLine(" Get all records of Id And Review");
+            //pm.ViewBYIdAndReview(productReviewList);
+            ProductDataTable dataTable = new ProductDataTable();
+            DataTable table = dataTable.AddToDatatable();
+            dataTable.DisplayProductReview(table);
             Console.ReadLine();
-            ///uc8 data table 
-            DataTable table = new DataTable();
-            
-           
-
         }
     }
 }

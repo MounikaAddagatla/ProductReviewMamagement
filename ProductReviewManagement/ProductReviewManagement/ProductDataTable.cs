@@ -7,7 +7,7 @@ namespace ProductReviewManagement
 {
     class ProductDataTable
     {
-        public void AddToDatatable()
+        public DataTable AddToDatatable()
         {
             DataTable table = new DataTable();
             table.Columns.Add("ProductID");
@@ -33,7 +33,17 @@ namespace ProductReviewManagement
             table.Rows.Add(15, 10, 4, "nice", true);
             table.Rows.Add(16, 10, 4, "nice", true);
             table.Rows.Add(6, 3, 1, "Bad", false);
-
+            return table;
+        }
+        public void DisplayProductReview(DataTable table)
+        {
+            //var products = from product in table.AsEnumerable() select product.Field<ProductReview>("ProductID","UserID", "Rating", "Review", "isLike");
+            DataRow[] records = table.Select();
+            for (int i = 0; i < records.Length; i++)
+            {
+                Console.WriteLine("product id :" + records[i][0] + " User id: " + records[i][1] + " Rating :" + records[i][2] +
+                    " Review :" + records[i][3] + " IsLike :" + records[i][4]);
+            }
         }
     }
 }
