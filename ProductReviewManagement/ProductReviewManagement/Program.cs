@@ -62,7 +62,8 @@ namespace ProductReviewManagement
             //dataTable.DisplayProductReview(table);
             //Console.WriteLine(" Average rating of Datatable");
             //dataTable.AverageProductRatings();
-            dataTable.FetchNiceWord(table);
+            // dataTable.FetchNiceWord(table);
+            dataTable.GetRecordOfTenth(table);
 
             Console.ReadLine();
         }

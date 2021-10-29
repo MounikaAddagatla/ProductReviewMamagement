@@ -67,5 +67,17 @@ namespace ProductReviewManagement
                 }
             }
         }
+        public void GetRecordOfTenth(DataTable table)
+        {
+            DataRow[] records = table.Select();
+            for (int i = 0; i < records.Length; i++)
+            {
+                if (records[i][1].Equals("10"))
+                {
+                    Console.WriteLine("product id :" + records[i][0] + " User id: " + records[i][1] + " Rating :" + records[i][2] +
+                    " Review :" + records[i][3] + " isLike :" + records[i][4]);
+                }
+            }
+        }
     }
 }
