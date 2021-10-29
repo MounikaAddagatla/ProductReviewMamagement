@@ -60,6 +60,9 @@ namespace ProductReviewManagement
             ProductDataTable dataTable = new ProductDataTable();
             DataTable table = dataTable.AddToDatatable();
             dataTable.DisplayProductReview(table);
+            Console.WriteLine(" Average rating of Datatable");
+            dataTable.AverageProductRatings();
+            Console.WriteLine(dataTable);
             Console.ReadLine();
         }
     }
